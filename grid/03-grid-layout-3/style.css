@@ -23,7 +23,10 @@
 
 .header {
   background-color: #393f4d;
-  grid-area: 1 / 1 / 1 / span 2;
+  grid-area: 1 / 1 / 1 / 3;
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  align-items: center;
 }
 
 .menu ul {
@@ -40,6 +43,9 @@
 .sidebar {
   background-color: #ff7755;
   grid-area: 2/1/4/2;
+  display: grid;
+  grid-template-rows: repeat(4, 1fr);
+  gap: 50px;
 }
 
 .sidebar .photo {
@@ -48,6 +54,8 @@
   font-size: 12px;
   font-weight: normal;
   border-radius: 10px;
+  display: grid;
+  align-items: center;
 }
 
 .sidebar .side-content {
@@ -55,21 +63,36 @@
   color: black;
   font-size: 16px;
   font-weight: normal;
+  display: grid;
+  align-items: center;
 }
 
 .nav {
   background-color: #ff7755;
   grid-area: 2/2/3/3;
+  display: grid;
+  align-items: center;
+}
+
+.nav ul {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
 }
 
 .nav ul li {
   font-size: 16px;
   text-transform: uppercase;
+  list-style-type: none;
 }
 
 .article {
   background-color: #bccbde;
   grid-area: 3/2/4/3;
+  display: grid;
+  grid-template-rows: repeat(2, 200px);
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-auto-rows: 200px;
+  gap: 15px;
 }
 
 .article p {
@@ -99,6 +122,8 @@
 .footer {
   background-color: #393f4d;
   grid-area: 4/1/5/3;
+  display: grid;
+  align-items: center;
 }
 
 .footer p {
